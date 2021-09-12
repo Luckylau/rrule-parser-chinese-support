@@ -11,6 +11,14 @@ String parseResult = ruleParser.parseRRule("FREQ=MONTHLY;BYSETPOS=4;BYDAY=SU;INT
 // Every 5 months on fourth Sunday
 ```
 
+```java 
+支持翻译成中文
+RRuleParser ruleParser = new RRuleParser(new ChineseTextBuilder(new LanguagePackageFragmentTranslator(new ChineseTranslation())));
+
+String parseResult = ruleParser.parseRRule("FREQ=MONTHLY;BYSETPOS=4;BYDAY=SU;INTERVAL=5");
+// 每5月的第4个星期日重复
+```
+
 ## Customization
 
 
